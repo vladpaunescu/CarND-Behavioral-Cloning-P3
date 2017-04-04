@@ -2,7 +2,7 @@
 
 ## Writeup Template
 
-###You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
+### You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
 
 ---
 
@@ -222,15 +222,15 @@ Here is a visualization of the architecture:
 To capture good driving behavior, I first recorded two laps on track one using center lane driving. Because I couldn't drive on the left/right lane (keyboard steering), I used the left, right, and centre cameras to simulate and compensate for the steering angle. Below you can see examples of left, centre and right cameras for the same sample image.
 
 
-+0.2 stering angle:
+Left camera image. +0.2 steering angle:
 
 ![left][image4]
 
-no correction for steering angle:
+Center camera. No correction for steering angle:
 
 ![centre][image3]
 
--0.2 steering angle:
+Right camera. -0.2 steering angle:
 
 ![right][image5]
 
