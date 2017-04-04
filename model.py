@@ -224,7 +224,7 @@ if __name__ == "__main__":
     model.fit_generator(train_generator, samples_per_epoch=20000, validation_data=validation_generator,
                         nb_val_samples=len(validation_samples), nb_epoch=7)
 
-    model.save('model_nvidia_generator_shift_t3.h5')
+    model.save('model_nvidia_generator_shift_t1.h5')
 
 
 

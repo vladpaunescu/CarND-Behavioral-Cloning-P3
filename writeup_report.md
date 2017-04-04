@@ -43,7 +43,7 @@ My project includes the following files:
 * writeup_report.md or writeup_report.pdf summarizing the results
 * model_nvidia_generator_shift_t1.h5 the final NVIDIA model trained on track 1
 * model_nvidia_generator_shift_t2.h5 the final NVIDIA model trained on track 2 - it doesn't succesfully drive the car across the full extent of the track
-* track1.ogv video recorded on the first track
+* track1.mp4 video recorded on the first track
 
 ####2. Submission includes functional code
 Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing 
@@ -52,6 +52,7 @@ Using the Udacity provided simulator and my drive.py file, the car can be driven
 ```sh
  python drive.py model_nvidia_generator_shift_t1.h5
 ```
+
 Due to the difficulty of the second track, I was unable to drive safely, so the colledcted training data is not good for the second track. The model for bonus track is not that good.
 
 ####3. Submission code is usable and readable
