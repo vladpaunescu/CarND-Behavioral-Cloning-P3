@@ -1,6 +1,6 @@
-#**Behavioral Cloning** 
+# **Behavioral Cloning** 
 
-##Writeup Template
+## Writeup Template
 
 ###You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
 
@@ -29,23 +29,22 @@ The goals / steps of this project are the following:
 [image9]: ./assets/shift_augmentation.png "Shift augmentation"
 
 ## Rubric Points
-###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
+### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
 
 ---
-###Files Submitted & Code Quality
+### Files Submitted & Code Quality
 
-####1. Submission includes all required files and can be used to run the simulator in autonomous mode
+#### 1. Submission includes all required files and can be used to run the simulator in autonomous mode
 
 My project includes the following files:
 * model.py containing the script to create and train the model
 * drive.py for driving the car in autonomous mode
-* model.h5 containing a trained convolution neural network 
-* writeup_report.md or writeup_report.pdf summarizing the results
+* writeup_report.md summarizing the results
 * model_nvidia_generator_shift_t1.h5 the final NVIDIA model trained on track 1
 * model_nvidia_generator_shift_t2.h5 the final NVIDIA model trained on track 2 - it doesn't succesfully drive the car across the full extent of the track
 * track1.mp4 video recorded on the first track
 
-####2. Submission includes functional code
+#### 2. Submission includes functional code
 Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing 
 
 
@@ -55,7 +54,7 @@ Using the Udacity provided simulator and my drive.py file, the car can be driven
 
 Due to the difficulty of the second track, I was unable to drive safely, so the colledcted training data is not good for the second track. The model for bonus track is not that good.
 
-####3. Submission code is usable and readable
+#### 3. Submission code is usable and readable
 
 The model.py file contains the code for training and saving the convolution neural network. The file shows the pipeline I used for training and validating the model, and it contains comments to explain how the code works.
 
@@ -63,9 +62,9 @@ The model.py has 2 nets:
 * LeNet
 * NVIDIA self-driving car model - the model that is saved, and manages to successfully drive on the first track.
 
-###Model Architecture and Training Strategy
+### Model Architecture and Training Strategy
 
-####1. An appropriate model architecture has been employed
+#### 1. An appropriate model architecture has been employed
 
 The model of choice is the [NVIDIA Self-Driving Car model](https://devblogs.nvidia.com/parallelforall/deep-learning-self-driving-cars/)
 
@@ -109,7 +108,7 @@ The model includes RELU activations after each convolutional layer, and fully co
  
  ![cropped sample][image1]
 
-####2. Attempts to reduce overfitting in the model
+#### 2. Attempts to reduce overfitting in the model
 
 
 The model was trained and validated on different data sets to ensure that the model was not overfitting (code line 217-220).
@@ -124,21 +123,21 @@ The model was trained and validated on different data sets to ensure that the mo
  
  The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
 
-####3. Model parameter tuning
+#### 3. Model parameter tuning
 
 The model used an adam optimizer, so the learning rate was not tuned manually (model.py line 222).
 
 Even the NVIDIA architecture doesn't specify any ReLU activations, I added them to aid learning.
 
-####4. Appropriate training data
+#### 4. Appropriate training data
 
 Training data was chosen to keep the vehicle driving on the road. I used a combination of left, center and right images. 
 
 For details about how I created the training data, see the next section. 
 
-###Model Architecture and Training Strategy
+### Model Architecture and Training Strategy
 
-####1. Solution Design Approach
+#### 1. Solution Design Approach
 
 The overall strategy for deriving a model architecture was to implement the NVIDIA model architecture, and test it for the current challenge.
 THe NVIDIA was designed with the autonomous driving goal in mind, and in order to predict a steering angle .
@@ -181,7 +180,7 @@ It was much more difficult for me to keep on the track when collecting training 
 
 At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road.
 
-####2. Final Model Architecture
+#### 2. Final Model Architecture
 
 The final model architecture (model.py lines 143-158) consisted of a convolution neural network with the following layers:
 
@@ -216,7 +215,7 @@ Here is a visualization of the architecture:
 
 ![Nvidia CNN architecture][image2]
 
-####3. Creation of the Training Set & Training Process
+#### 3. Creation of the Training Set & Training Process
 
 **Left/Right/Centre Camera Augmentation**
 
