@@ -102,7 +102,7 @@ The model includes RELU activations after each convolutional layer, and fully co
  
  The input has is normalized between -1 and 1, and has 0 mean.
  The input is cropped. The top 70 pixels, and bottom 25 pixels are removed.
- Thus, the area above the horizon and the bottom part, representing th front of the care are removed.
+ Thus, the area above the horizon and the bottom part, representing the frontal part of the car are removed.
  
  A cropped image as seen by the network is shown below:
  
